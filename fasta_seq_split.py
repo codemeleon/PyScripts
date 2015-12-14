@@ -8,7 +8,7 @@ def option( ):
 
 if __name__== '__main__':
     opt = option( )
-    for rec in SeqIO.parse(opt.dest,"fasta"):
+    for rec in SeqIO.parse(opt.infasta,"fasta"):
         with open("%s.fasta"%rec.id,"w") as fout:
             fout.write(">%s\n%s\n"%(rec.id,rec.seq))
 
